@@ -140,19 +140,6 @@ section {
     font-size: 1.5em;
     font-weight: 400;
   }
-  .mobile1 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #f0f0f0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
   .sell-more p {
     margin-left: 20px;
   }
@@ -617,4 +604,4 @@ section {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=style.css.map */
