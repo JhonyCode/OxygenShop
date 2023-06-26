@@ -383,7 +383,6 @@ img {
   text-align: center;
   position: relative;
   width: 100%;
-  background-color: #f0f0f0;
   padding: 20px 30px;
 }
 
@@ -590,7 +589,7 @@ img {
 
 .checkbox-form {
   display: inline-flex;
-  margin: -230px 10px 0 0;
+  margin-bottom: 140px !important;
 }
 
 .fa-envelope {
@@ -635,7 +634,7 @@ img {
   color: white;
   padding: 20px 95px;
   border-radius: 25px;
-  margin: 10px 0 0 50px;
+  margin: 10px 0 0 150px;
   box-shadow: 0px 4px 8px rgba(10, 149, 209, 0.408);
 }
 
@@ -645,11 +644,55 @@ img {
 
 .list-basic2 {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  line-height: 25px;
+  flex-direction: column;
+  line-height: 28px;
   font-weight: 500;
   font-size: 14px;
+  margin-left: -130px;
+  margin-bottom: 30px;
+}
+
+footer {
+  box-shadow: 0px -5px 10px rgba(128, 128, 128, 0.372);
+  padding: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 800px;
+  line-height: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.social-icons a:first-child {
+  margin-left: 0;
+}
+
+.fab {
+  font-size: 24px;
+}
+
+.fa-twitter {
+  color: #55ACEE;
+}
+
+.fa-facebook {
+  color: #3B5998;
+}
+
+.h2-footer {
+  font-weight: 400;
+  color: #08a6e4;
 }
 
 @media only screen and (min-width: 1000px) {
