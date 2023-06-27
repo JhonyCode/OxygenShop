@@ -14,6 +14,10 @@ section {
   width: 100%;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* MOBILE MENU BUTTON */
 .menu-button-container {
   display: none;
@@ -67,6 +71,12 @@ section {
 
 /* RESPONSIVE STYLES */
 @media (max-width: 700px) {
+  .footer-desktop {
+    display: none;
+  }
+  .blue-container-wrapper p:first-child {
+    display: none;
+  }
   /* GENERAL RULES */
   a {
     margin-left: 10px;
@@ -488,7 +498,7 @@ section {
 }
 
 .professional {
-  margin-left: 5px;
+  margin-left: 10px;
   font-weight: 600;
 }
 
@@ -499,6 +509,13 @@ section {
 }
 
 .limited {
+  font-size: 15px !important;
+  margin: -30px 0 0 5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.limited1 {
   font-size: 15px !important;
   margin: -30px 0 0 5px;
   font-weight: 600;
@@ -885,6 +902,7 @@ footer {
     display: none;
   }
   .linea {
+    margin-left: 18px;
     display: block;
     width: 420px;
     border-bottom: 4px solid #FB3B64;
@@ -899,6 +917,7 @@ footer {
     white-space: pre-line;
   }
   .linea2 {
+    margin-left: 20px;
     display: block;
     width: 420px;
     border-bottom: 4px solid #07ACE6;
@@ -985,7 +1004,7 @@ footer {
     width: 60%;
     height: 450px;
     background-color: white;
-    padding: 50px;
+    padding: 20px;
   }
   .trumpet .content-div2 .right-container-trumpet {
     width: 40%;
@@ -1002,8 +1021,9 @@ footer {
   }
   .right-container-trumpet div {
     margin-top: -20px;
-    height: 450px;
+    height: 455px;
     width: 580px;
+    margin-left: 10px;
   }
   .background-trumpet {
     position: relative;
@@ -1017,12 +1037,156 @@ footer {
     transform: translate(0%, -90%);
   }
   .linea3 {
+    margin-top: 30px;
     display: block;
     width: 420px;
-    border-bottom: 4px solid #07ACE6;
+    border-bottom: 4px solid #55DFB4;
   }
   .recognition:first-child {
     line-height: 1.5;
+  }
+  .recognition {
+    font-size: 1.5em;
+  }
+  .pircing-section {
+    margin-top: 70px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container-pircing {
+    width: 250px;
+    height: 450px;
+    margin-top: 50px !important;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1/2;
+  }
+  .container-pircing-blue {
+    margin-top: 40px !important;
+    grid-column: 2/3;
+    width: 250px;
+    height: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-pircing-green {
+    margin-top: 50px !important;
+    width: 250px;
+    height: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 3/4;
+  }
+  .pircing {
+    display: none;
+  }
+  .list-basic {
+    flex-direction: column;
+  }
+  .list-basic li {
+    white-space: nowrap;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .left-content {
+    padding: 0;
+  }
+  .prices {
+    margin-top: 0;
+  }
+  .prices1 {
+    margin-top: 0;
+  }
+  .right-content {
+    margin-right: 60px;
+  }
+  .limited {
+    margin-bottom: 10px;
+  }
+  .limited1 {
+    margin-bottom: 30px;
+  }
+  .blue-container-wrapper h3 {
+    margin-top: -20px;
+    font-size: 1.5em;
+    font-weight: 400;
+  }
+  .form-section {
+    padding: 3% 10%;
+    margin-top: 100px;
+    display: flex;
+  }
+  .formulario {
+    display: flex;
+    flex-direction: row;
+  }
+  .questions {
+    justify-content: center;
+    text-align: center;
+    width: 45%;
+  }
+  .form-check {
+    margin-top: -50px;
+    width: 50%;
+  }
+  .div-list {
+    margin: 0 0 0 30px;
+  }
+  .wrap {
+    white-space: nowrap;
+    font-size: 1em;
+    margin-left: 30px;
+  }
+  .list-basic2 {
+    color: grey;
+    display: flex;
+    flex-direction: row;
+    line-height: 28px;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 0 0 23px;
+  }
+  .checkbox-form {
+    margin-top: 40px;
+    margin-left: -70px;
+  }
+  .data-protection p {
+    margin-top: -20px;
+    margin-left: -60px;
+  }
+  .boton-send {
+    margin: 10px 0 0 450px;
+  }
+  .footer-mobile {
+    display: none;
+  }
+  .footer-desktop {
+    height: 100px;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .copyright {
+    order: 1;
+    margin-left: -250px;
+  }
+  .social-icons {
+    order: 2;
+    margin-right: -250px;
+  }
+  .social-icons a {
+    margin-left: -50px;
   }
 }
 
