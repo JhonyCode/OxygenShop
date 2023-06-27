@@ -784,7 +784,7 @@ footer {
   a {
     font-weight: 500;
     color: grey !important;
-    font-size: .75em;
+    font-size: 1em;
     text-decoration: none;
     display: inline-block;
     padding: 0 35px;
@@ -834,6 +834,7 @@ footer {
   }
 
   .title {
+    font-size: $titles-size;
     margin-left: 4.5%;
   }
 
@@ -1133,7 +1134,7 @@ footer {
   }
 
   .container-pircing {
-    width: 250px;
+    width: 350px;
     height: 450px;
     margin-top: 50px !important;
     margin: 0 auto;
@@ -1146,7 +1147,7 @@ footer {
   .container-pircing-blue {
     margin-top: 40px !important;
     grid-column: 2 / 3;
-    width: 250px;
+    width: 350px;
     height: 450px;
     margin: 0 auto;
     display: flex;
@@ -1156,7 +1157,7 @@ footer {
 
   .container-pircing-green {
     margin-top: 50px !important;
-    width: 250px;
+    width: 350px;
     height: 450px;
     margin: 0 auto;
     display: flex;
