@@ -74,7 +74,7 @@ section {
   .footer-desktop {
     display: none;
   }
-  .blue-container-wrapper p:first-child {
+  .blue-container-wrapper h3 {
     display: none;
   }
   /* GENERAL RULES */
