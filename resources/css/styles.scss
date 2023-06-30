@@ -23,9 +23,206 @@ body {
   box-sizing: border-box;
 }
 
+#progress-bar {
+  width: 100%;
+  height: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+#progress-bar .fill {
+  height: 100%;
+  background: #005AA7;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFDE4, #005AA7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+#return-to-top-btn {
+  background-repeat: no-repeat;
+  font-size: 20px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+.fa-stack {
+  color: #07ACE6;
+}
+
+.fa-stack:hover {
+  color: black;
+}
+
+#return-to-top-btn.show {
+  display: block;
+  opacity: 1;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.section-slide {
+  margin: 6.5rem auto;
+}
+
 section {
   width: 100%;
 }
+
+.slide-viewer {
+  position: relative;
+  background: white;
+  max-width: 750px;
+  width: 100%;
+  height: 450px;
+  margin: 0 auto;
+}
+
+.slide-img {
+  position: absolute;
+  object-fit: cover;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  transition: 400ms ease-in;
+}
+
+
+.slide-img-active {
+  opacity: 1;
+}
+
+.slide-btn-visible {
+  visibility: inherit;
+}
+
+.slide-btn-disabled {
+  visibility: hidden;
+}
+
+.container-arrow {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgb(255, 255, 255, 0.7);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.container-arrow:hover {
+  background: #fff;
+}
+
+.container-arrow-left {
+  left: 10px;
+}
+
+.container-arrow-right {
+  right: 10px;
+}
+
+
+
+.slide-btn-container {
+  width: max-content;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.slide-btn {
+  padding: 0;
+  width: 12px;
+  height: 12px;
+  background: var(-grey);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.slide-btn:hover,
+.slide-btn-active {
+  background: var(-primary);
+}
+
+
+.modal-content span {
+  color: black;
+  font-size: 2em;
+}
+
+#subscribeForm button:hover {
+  color: black;
+}
+
+#subscribeForm input {
+  width: 80%;
+}
+
+#subscribeForm button {
+  color: white;
+  margin-top: 20px;
+  padding: 15px 60px;
+  font-weight: 500;
+  background-color: $principal-color;
+  ;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  color: $principal-color;
+}
+
 
 * {
   box-sizing: border-box;
@@ -82,13 +279,17 @@ section {
   transform: rotate(-405deg);
 }
 
+.input-error {
+  border: 1px solid red;
+}
+
 /* RESPONSIVE STYLES */
 @media (max-width: 700px) {
   .footer-desktop {
     display: none;
   }
 
-  .blue-container-wrapper h3{
+  .blue-container-wrapper h3 {
     display: none;
   }
 
@@ -682,6 +883,19 @@ section {
   border-bottom: 1px solid black;
 }
 
+input {
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+
+}
+
+/* Estilo del input cuando está enfocado */
+input:focus {
+  border-bottom: 2px solid red;
+  /* Borde inferior más grueso al estar enfocado */
+}
+
 .boton-send {
   font-size: 1em;
   border: none;
@@ -751,6 +965,10 @@ footer {
   color: $principal-color;
 }
 
+.background-laptop {
+  width: 100%;
+}
+
 .background-laptop img {
   width: 100%;
   height: 250px;
@@ -781,6 +999,11 @@ footer {
 //ESCRITORIO 
 
 @media only screen and (min-width: 1000px) {
+
+  form {
+    margin-top: 20px;
+  }
+
   a {
     font-weight: 500;
     color: grey !important;
@@ -801,7 +1024,7 @@ footer {
   a:hover {
     color: black !important;
     text-underline-offset: 18px;
-    text-decoration-thickness: 2px !important;
+    text-decoration-thickness: 3px !important;
     text-decoration-color: #07ACE6 !important;
     text-decoration: underline;
   }
@@ -1295,7 +1518,8 @@ footer {
     order: 2;
     margin-right: -250px;
   }
- .social-icons a{
-  margin-left: -50px;
- }
+
+  .social-icons a {
+    margin-left: -50px;
+  }
 }
