@@ -11,6 +11,16 @@
     <title>OXYGENShop</title>
   </head>
   <body>
+    <a id="return-to-top-btn">
+      <span class="fa-stack">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+    <div id="progress-bar">
+      <div class="fill"></div>
+    </div>
+    <script src="./main.js"></script>
     <header class="top-nav">
       <div class="title">OXYGENSHop</div>
       <input id="menu-toggle" type="checkbox" />
@@ -222,14 +232,60 @@
         </div>
       </div>
     </section>
+    <section class="section-slide">
+      <div id="slider" class="slide-viewer">
+        <img
+          src="./resources/images/image1.jpg"
+          alt="Foto de portátil con planta y libreta"
+          class="slide-img slide-img-active"
+        />
+        <img
+          src="./resources/images/image2.jpg"
+          alt="Foto de un café"
+          class="slide-img"
+        />
+        <img
+          src="./resources/images/image3.jpg"
+          alt="Foto de un portátil"
+          class="slide-img"
+        />
+        <img
+          src="./resources/images/image4.jpg"
+          alt="Foto de persona sujetando algunos billetes"
+          class="slide-img"
+        />
+
+        <div class="container-arrow container-arrow-right" id="arrow-right">
+          >
+        </div>
+        <div class="container-arrow container-arrow-left" id="arrow-left">
+          <
+        </div>
+      </div>
+
+      <div class="slide-btn-container">
+        <button class="slide-btn slide-btn-active"></button>
+        <button class="slide-btn"></button>
+        <button class="slide-btn"></button>
+        <button class="slide-btn"></button>
+      </div>
+    </section>
     <section class="pircing-section">
+      <div>
+        <select class="pricing-currency">
+          <option value="gbp" id="gbp-option">GBP - ₤</option>
+          <option value="eur" id="eur-option">EUR - €</option>
+          <option value="usd" id="usd-option" selected>USD - $</option>
+        </select>
+      </div>
+
       <div class="pircing">
         <p>Pircing</p>
       </div>
       <div class="container-pircing">
         <div class="left-content">
           <p>Basic</p>
-          <p class="prices">$0</p>
+          <p id="priceBasic" class="prices"></p>
         </div>
         <div class="right-content">
           <ul class="list-basic">
@@ -257,7 +313,7 @@
         <div class="container-pircing-blue">
           <div>
             <p class="professional">Professional</p>
-            <p class="prices1">$25</p>
+            <p id="priceProfessional" class="prices1"></p>
             <p class="limited">Limited offer</p>
           </div>
           <div class="right-content">
@@ -282,7 +338,7 @@
       <div class="container-pircing-green">
         <div>
           <p class="premium">Premium</p>
-          <p class="prices2">$60</p>
+          <p id="pricePremium" class="prices2"></p>
           <p class="limited1">Limited offer</p>
         </div>
         <div class="right-content">
@@ -310,13 +366,25 @@
           </div>
         </div>
         <div class="form-check">
-          <form>
-            <label for="name">NAME</label><br />
-            <input type="text" id="name" name="name" /><br />
+          <form id="myForm">
+            <label for="nombre">NAME</label><br />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              minlength="2"
+              maxlength="100"
+              required
+            /><br />
             <label for="email">EMAIL</label><br />
-            <input type="email" id="email" name="email" /><br />
+            <input type="email" id="email" name="email" required /><br />
             <div class="data-protection">
-              <input class="checkbox-form" type="checkbox" />
+              <input
+                class="checkbox-form"
+                id="checkbox"
+                type="checkbox"
+                required
+              />
               <p>
                 I hereby give consent for my personal data included in my
                 application to be processed for the purposes of the recruitment
@@ -354,6 +422,21 @@
         </div>
       </div>
     </footer>
+    <div id="Modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Subscribe to our newsletter</h2>
+        <form id="subscribeForm">
+          <input
+            type="email"
+            id="emailInput"
+            placeholder="Enter your email address"
+            required
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
   </body>
   <script
     src="https://kit.fontawesome.com/c549dd5578.js"
